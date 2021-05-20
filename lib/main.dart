@@ -25,23 +25,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> data = [];
-    data.add(Text("press for add number"));
-    data.add(Text(number.toString(),style: TextStyle(fontSize: 60),));
-
     return Scaffold(
       appBar: AppBar(
         title: Text("Count number"),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: data,
+        child: ListView(
+          children: getData(12),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: addnumBer,
-        child: Icon(Icons.add),
       ),
     );
   }
@@ -51,4 +42,15 @@ class _MyHomePageState extends State<MyHomePage> {
       number++;
     });
   }
+}
+
+List<Widget> getData(int count) {
+  List<Widget> data = [];
+  for (var i = 0; i < count; i++) {
+    data.add(
+      Text("number : ${i + 1}",
+          style: TextStyle(fontSize: 25, color: Colors.blue[700])),
+    );
+  }
+  return data;
 }
