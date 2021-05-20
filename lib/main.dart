@@ -25,6 +25,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    List<Widget> data = [];
+    data.add(Text("press for add number"));
+    data.add(Text(number.toString(),style: TextStyle(fontSize: 60),));
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Count number"),
@@ -32,12 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              number.toString(),
-              style: TextStyle(fontSize: 60),
-            ),
-          ],
+          children: data,
         ),
       ),
       floatingActionButton: FloatingActionButton(
