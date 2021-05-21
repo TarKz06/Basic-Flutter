@@ -47,10 +47,8 @@ class _MyHomePageState extends State<MyHomePage> {
 List<Widget> getData(int count) {
   List<Widget> data = [];
   for (var i = 0; i < count; i++) {
-    data.add(
-      Text("number : ${i + 1}",
-          style: TextStyle(fontSize: 25, color: Colors.blue[700])),
-    );
+    var menu = ListTile(title: Text("mamu ${i+1}"),subtitle: Text("subyiyle"),);
+    data.add(menu);
   }
   return data;
 }
