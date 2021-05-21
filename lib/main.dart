@@ -26,15 +26,14 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Count number"),
-      ),
-      body: Center(
-        child: ListView(
-          children: getData(12),
+        appBar: AppBar(
+          title: Text("Count number"),
         ),
-      ),
-    );
+        body: ListView.builder(
+          itemCount: 15,
+          itemBuilder: (BuildContext context, int index) {
+          return ListTile(title: Text("mamu ${index+1}"));
+        }));
   }
 
   void addnumBer() {
@@ -42,13 +41,4 @@ class _MyHomePageState extends State<MyHomePage> {
       number++;
     });
   }
-}
-
-List<Widget> getData(int count) {
-  List<Widget> data = [];
-  for (var i = 0; i < count; i++) {
-    var menu = ListTile(title: Text("mamu ${i+1}"),subtitle: Text("subyiyle"),);
-    data.add(menu);
-  }
-  return data;
 }
