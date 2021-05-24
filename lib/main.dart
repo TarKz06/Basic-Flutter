@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "My app",
       home: MyHomePage(),
-      theme: ThemeData(primaryColor: Colors.orange[200]),
+      theme: ThemeData(primaryColor: Colors.blueAccent),
     );
   }
 }
@@ -23,10 +23,10 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   List<FoodMenu> menu = [
-    FoodMenu("pizza", "300","assets/images/1.png"),
-    FoodMenu("somtam", "90","assets/images/2.png"),
-    FoodMenu("kapao", "450","assets/images/3.png"),
-    FoodMenu("padtai", "200","assets/images/4.png")
+    FoodMenu("pizza", "300", "assets/images/1.png"),
+    FoodMenu("somtam", "90", "assets/images/2.png"),
+    FoodMenu("kapao", "450", "assets/images/3.png"),
+    FoodMenu("padtai", "200", "assets/images/4.png")
   ];
   @override
   Widget build(BuildContext context) {
@@ -45,6 +45,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   style: TextStyle(fontSize: 39),
                 ),
                 subtitle: Text("price : " + food.price + " Bath "),
+                onTap: () {
+                  print("You choose :" + food.name);
+                },
               );
             }));
   }
