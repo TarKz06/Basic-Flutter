@@ -59,18 +59,21 @@ class _MyHomePageState extends State<MyHomePage> {
                             fontSize: 25,
                             color: Colors.white,
                             fontWeight: FontWeight.bold),
-                            textAlign: TextAlign.right,
+                        textAlign: TextAlign.right,
                       ),
                     )
                   ],
                 ),
               ),
-               Container(
+              SizedBox(
+                height: 10,
+              ),
+              Container(
                 padding: const EdgeInsets.all(8.0),
                 decoration: BoxDecoration(
                     color: Colors.green,
                     borderRadius: BorderRadius.circular(10)),
-                height: 120,
+                height: 100,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -83,23 +86,25 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     Expanded(
                       child: Text(
-                        "",
+                        "400000000000",
                         style: TextStyle(
                             fontSize: 25,
                             color: Colors.white,
                             fontWeight: FontWeight.bold),
-                            textAlign: TextAlign.right,
+                        textAlign: TextAlign.right,
                       ),
                     )
                   ],
                 ),
               ),
-               Container(
+              SizedBox(
+                height: 10,
+              ),
+              Container(
                 padding: const EdgeInsets.all(8.0),
                 decoration: BoxDecoration(
-                    color: Colors.red,
-                    borderRadius: BorderRadius.circular(10)),
-                height: 120,
+                    color: Colors.red, borderRadius: BorderRadius.circular(10)),
+                height: 100,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -117,7 +122,39 @@ class _MyHomePageState extends State<MyHomePage> {
                             fontSize: 25,
                             color: Colors.white,
                             fontWeight: FontWeight.bold),
-                            textAlign: TextAlign.right,
+                        textAlign: TextAlign.right,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                padding: const EdgeInsets.all(8.0),
+                decoration: BoxDecoration(
+                    color: Colors.orange,
+                    borderRadius: BorderRadius.circular(10)),
+                height: 100,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Bill :",
+                      style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Expanded(
+                      child: Text(
+                        "20000000",
+                        style: TextStyle(
+                            fontSize: 25,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.right,
                       ),
                     )
                   ],
