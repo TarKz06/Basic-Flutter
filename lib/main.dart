@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "My app",
       home: MyHomePage(),
-      theme: ThemeData(primaryColor: Colors.purple[200]),
+      theme: ThemeData(primaryColor: Colors.purple[400]),
     );
   }
 }
@@ -39,35 +39,11 @@ class _MyHomePageState extends State<MyHomePage> {
               Container(
                 padding: const EdgeInsets.all(8.0),
                 decoration: BoxDecoration(
-                    color: Colors.purple,
-                    borderRadius: BorderRadius.circular(10)),
-                height: 120,
-                child: Row(
-                  children: [
-                    Text(
-                      "Balance :",
-                      style: TextStyle(
-                          fontSize: 25,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      "20000000",
-                      style: TextStyle(
-                          fontSize: 25,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold),
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.all(8.0),
-                decoration: BoxDecoration(
                     color: Colors.blue,
                     borderRadius: BorderRadius.circular(10)),
                 height: 120,
                 child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
                       "Balance :",
@@ -76,18 +52,81 @@ class _MyHomePageState extends State<MyHomePage> {
                           color: Colors.white,
                           fontWeight: FontWeight.bold),
                     ),
+                    Expanded(
+                      child: Text(
+                        "20000000",
+                        style: TextStyle(
+                            fontSize: 25,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.right,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+               Container(
+                padding: const EdgeInsets.all(8.0),
+                decoration: BoxDecoration(
+                    color: Colors.green,
+                    borderRadius: BorderRadius.circular(10)),
+                height: 120,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
                     Text(
-                      "1000000",
+                      "Income :",
                       style: TextStyle(
                           fontSize: 25,
                           color: Colors.white,
                           fontWeight: FontWeight.bold),
+                    ),
+                    Expanded(
+                      child: Text(
+                        "",
+                        style: TextStyle(
+                            fontSize: 25,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.right,
+                      ),
                     )
                   ],
                 ),
-              )
+              ),
+               Container(
+                padding: const EdgeInsets.all(8.0),
+                decoration: BoxDecoration(
+                    color: Colors.red,
+                    borderRadius: BorderRadius.circular(10)),
+                height: 120,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Expense :",
+                      style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Expanded(
+                      child: Text(
+                        "20000000",
+                        style: TextStyle(
+                            fontSize: 25,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.right,
+                      ),
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
         ));
   }
 }
+
+//expended
