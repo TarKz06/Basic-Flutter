@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "My app",
       home: MyHomePage(),
-      theme: ThemeData(primaryColor: Colors.blueAccent),
+      theme: ThemeData(primaryColor: Colors.purple[200]),
     );
   }
 }
@@ -26,7 +26,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("My Account"),
+          title: Text("My Account",
+              style: TextStyle(
+                  fontSize: 25,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold)),
         ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -35,20 +39,52 @@ class _MyHomePageState extends State<MyHomePage> {
               Container(
                 padding: const EdgeInsets.all(8.0),
                 decoration: BoxDecoration(
-                    color: Colors.green,
+                    color: Colors.purple,
                     borderRadius: BorderRadius.circular(10)),
-                height: 100,
+                height: 120,
                 child: Row(
-                  children: [Text("Balance :"), Text("20000000")],
+                  children: [
+                    Text(
+                      "Balance :",
+                      style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      "20000000",
+                      style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
                 ),
               ),
               Container(
-                decoration: BoxDecoration(color: Colors.blue),
-                height: 100,
-              ),
-              Container(
-                decoration: BoxDecoration(color: Colors.orange),
-                height: 100,
+                padding: const EdgeInsets.all(8.0),
+                decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(10)),
+                height: 120,
+                child: Row(
+                  children: [
+                    Text(
+                      "Balance :",
+                      style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      "1000000",
+                      style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
               )
             ],
           ),
