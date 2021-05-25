@@ -37,11 +37,17 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             children: [
               MoneyBox("Balance", 200000000000, Colors.blue, 120),
-              SizedBox(height: 5,),
+              SizedBox(
+                height: 5,
+              ),
               MoneyBox("Income", 400000000000, Colors.green, 100),
-              SizedBox(height: 5,),
+              SizedBox(
+                height: 5,
+              ),
               MoneyBox("Expend", 50000000, Colors.red, 100),
-              SizedBox(height: 5,),
+              SizedBox(
+                height: 5,
+              ),
               MoneyBox("Debt", 9000000000, Colors.orange, 100),
             ],
           ),
