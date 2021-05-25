@@ -22,33 +22,27 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  List<FoodMenu> menu = [
-    FoodMenu("pizza", "300", "assets/images/1.png"),
-    FoodMenu("somtam", "90", "assets/images/2.png"),
-    FoodMenu("kapao", "450", "assets/images/3.png"),
-    FoodMenu("padtai", "200", "assets/images/4.png")
-  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Choose manu"),
+          title: Text("My Account"),
         ),
-        body: ListView.builder(
-            itemCount: menu.length,
-            itemBuilder: (BuildContext context, int index) {
-              FoodMenu food = menu[index];
-              return ListTile(
-                leading: Image.asset(food.img),
-                title: Text(
-                  food.name,
-                  style: TextStyle(fontSize: 39),
-                ),
-                subtitle: Text("price : " + food.price + " Bath "),
-                onTap: () {
-                  print("You choose :" + food.name);
-                },
-              );
-            }));
+        body: Column(
+          children: [
+            Container(
+              decoration: BoxDecoration(color: Colors.green,borderRadius: BorderRadius.circular(10)),
+              height: 100,
+            ),
+              Container(
+              decoration: BoxDecoration(color: Colors.blue),
+              height: 100,
+            ),
+              Container(
+              decoration: BoxDecoration(color: Colors.orange),
+              height: 100,
+            )
+          ],
+        ));
   }
 }
