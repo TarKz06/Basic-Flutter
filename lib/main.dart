@@ -5,6 +5,8 @@ void main() {
   runApp(MyApp());
 }
 
+int number = 0;
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -23,34 +25,37 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   @override
+  void initState() {
+    super.initState();
+    print("initstate");
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("My Account",
-              style: TextStyle(
-                  fontSize: 25,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold)),
-        ),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              MoneyBox("Balance", 200000000000, Colors.blue, 120),
-              SizedBox(
-                height: 5,
-              ),
-              MoneyBox("Income", 400000000000, Colors.green, 100),
-              SizedBox(
-                height: 5,
-              ),
-              MoneyBox("Expend", 50000000, Colors.red, 100),
-              SizedBox(
-                height: 5,
-              ),
-              MoneyBox("Debt", 9000000000, Colors.orange, 100),
-            ],
-          ),
-        ));
+      appBar: AppBar(
+        title: Text("My Account",
+            style: TextStyle(
+                fontSize: 25,
+                color: Colors.white,
+                fontWeight: FontWeight.bold)),
+      ),
+      body: Column(
+        children: [
+          Text(
+            number.toString(),
+            style: TextStyle(fontSize: 30),
+          )
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            number++;
+          });
+        },
+        child: Icon(Icons.add),
+      ),
+    );
   }
 }
